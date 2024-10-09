@@ -1,0 +1,213 @@
+/* .service-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  background-color: #f9f9f9;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-box {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  width: 260px; 
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards; 
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  animation: bounceIn 1s ease forwards;
+  opacity: 1;
+}
+
+.service-name {
+  font-size: 1.5em;
+  color: #333;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 100%;
+    max-width: 400px;
+  }
+} */
+
+
+/* Service.css */
+
+/* Service Image Styling */
+/* .service-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+
+.service-name {
+  font-size: 1.5em;
+  color: #333;
+} */
+
+
+/* 
+.service-box,
+.service-box-full {
+  visibility: visible;
+  opacity: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.animate__pulse {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+
+.animate__slideInUp {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+
+.service-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.service-name {
+  font-size: 1.5em;
+  color: #333;
+}
+
+
+.service-box,
+.service-box-full {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-box:hover,
+.service-box-full:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+} */
+
+
+
+/* Service box styling */
+.service-box {
+  position: relative; /* To position the text over the image */
+  width: 33%;         /* 30% width for the 3 boxes in the first row */
+  height: 250px;      /* Adjust the height as needed */
+  background-color: #fff;
+  /* border-radius: 15px; */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;   /* Prevent overflow of content */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+/* Service image styling */
+.service-image {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  z-index: 1; /* Image is on top */
+}
+
+/* Center the service name as an overlay on the image */
+.service-name {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center by adjusting positioning */
+  font-size: 1.5em;
+  color: black;
+  /* background-color: rgba(0, 0, 0, 0.5); Dark overlay for better contrast */
+  padding: 10px 20px;
+  z-index: 2; /* Ensure text is above the image */
+  border-radius: 5px;
+}
+
+/* Hover effects */
+.service-box:hover {
+  transform: translateY(-10px); /* Slight upward movement */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+.animate__slideInUp {
+  opacity: 1;
+  transform: translateY(0);
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.animate__pulse {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-box {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px;
+  }
+}

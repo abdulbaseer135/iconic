@@ -1,0 +1,189 @@
+/* Wrapper for centering the entire app */
+.wrapper1 {
+    width: 90%; /* Full viewport width */
+    height: 80vh; /* Full viewport height */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */  
+    background-color: #7EBFB3;
+    margin-left: 5%;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.app-container {
+    width: 80%;
+    height: 360px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 
+                0 2px 2px hsl(0deg 0% 0% / 0.075),
+                0 4px 4px hsl(0deg 0% 0% / 0.075), 
+                0 8px 8px hsl(0deg 0% 0% / 0.075),
+                0 16px 16px hsl(0deg 0% 0% / 0.075);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    background-color: #A7F2E4;
+    /* margin-left: 10%; */
+}
+
+/* Navigation Styling */
+.nav-container {
+    background-color: #fdfdfd;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #eeeeee;
+    height: 44px;
+    background-color: #A7F2E4;
+}
+
+.nav-container h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+/* Tab List */
+.tabs-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Allows tabs to wrap if needed */
+    background-color: #194759;
+}
+
+
+/* Tab Item */
+.tab-item {
+    flex: 1;
+    min-width: 0; 
+    max-width: 25%; /* Limits max width to four items per row */
+    padding: 10px 15px; /* Adjusts padding for better spacing */
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+
+
+/* Selected Tab Styling */
+.tab-item.selected {
+    background-color: #eeeeee;
+    color: black;
+}
+
+/* Underline for Selected Tab */
+.tab-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+/* 
+.content-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 128px;
+    user-select: none;
+    margin-top: 50px;
+}
+
+
+.content-motion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+/* Content Area */
+/* .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    margin-top: 50px;
+} */
+
+/* Content Motion (for motion div) */
+.content-motion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between icon and text */
+    width: 100%; /* Full width for the content layout */
+    padding: 20px; /* Padding for spacing */
+}
+
+/* Layout for content */
+.content-layout {
+    display: flex; /* Flex layout for text and icon */
+    justify-content: space-between; /* Space between text and icon */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+}
+
+/* Full width content container */
+.content-container {
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+    padding: 20px; /* Optional padding */
+    margin-top: 60px;
+}
+
+/* Content layout for icon and text */
+.content-layout {
+    display: flex; /* Flex layout for icon and text */
+    justify-content: center; /* Center content */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Full width */
+}
+
+/* Icon container */
+.icon-container {
+    font-size: 128px; /* Icon size */
+    margin-right: 120px; /* Space between icon and text */
+}
+
+/* Text container */
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    align-items: flex-start; /* Align text to the left */
+}
+
+/* Button styling */
+.follow-button {
+    padding: 10px 20px; /* Padding for button */
+    background-color: #194759; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    margin-top: 10px; /* Space above button */
+}
+
+/* Button hover effect */
+.follow-button:hover {
+    background-color: #7EBFB3; /* Darker color on hover */
+    color: black;
+    font-weight: 600;
+}

@@ -1,0 +1,132 @@
+   /* Services Page Styles */
+   /* .services-container {
+    padding: 20px;
+  }
+  
+  .services-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .services-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+  }
+  
+  .service-box {
+    flex: 1 1 22%;
+    margin: 10px;
+    background-color: #A7F3E4;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-box:hover {
+    transform: scale(1.05); 
+  }
+  
+  .service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .service-details {
+    margin-top: 10px;
+    color: #555;
+  }
+   */
+
+
+
+/* Services.css */
+
+/* Container for the service rows */
+.services-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* background-color: #4F7369; */
+  background-image: url('../Images/bg1.png'); /* Set your background image */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image within the container */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Service row: display flex to arrange boxes horizontally */
+.service-row {
+  display: flex;
+  justify-content: space-around; /* Space between boxes */
+  margin-bottom: 20px; /* Add margin between rows */
+  gap: 20px;
+}
+
+/* Service box styling for first row */
+.service-box {
+  background-color: #fff;
+  /* border-radius: 15px; */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 33%; /* 3 boxes in the first row (30% each) */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards; /* Entry animation */
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Elevate box on hover */
+}
+
+/* Service box styling for second row */
+.service-box-full {
+  background-color: #fff;
+  /* border-radius: 15px; */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 80%; /* Full width for the second row box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards; /* Entry animation */
+}
+
+.service-box-full:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Elevate box on hover */
+}
+
+/* Animation for the fade-in effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box,
+  .service-box-full {
+    width: 100%; /* Full width for mobile */
+    max-width: 400px; /* Optional: limit the width for mobile */
+    margin-bottom: 20px;
+  }
+}

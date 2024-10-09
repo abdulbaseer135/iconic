@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+  --bg: #f2f2f2;
+  --white: #fff;
+  --black: #333;
+  --gray: #999;
+  --green: #00ad5f;
+  --border: 1px solid #e6e6e6;
+}
+
+/* Centering the contact form in the page */
+.contact-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: -webkit-linear-gradient(right, #A7F3E4, #7EBFB3, #4F7369, #194759);
+}
+
+.contact-form {
+    width: 70vw; /* Adjusted width */
+    display: flex;
+    justify-content: space-between;
+    background: -webkit-linear-gradient(right, #A7F3E4, #7EBFB3, #2be5b1, #9dc0cf);
+    margin: 0px 0 50px; /* Set upper margin to 30px and kept the bottom margin as 50px */
+  }
+  
+
+.contact-form > * {
+  width: 45%; /* Reduced the width of child elements */
+}
+
+.first-container {
+  width: 45%; /* Reduced the width of the first container */
+  background: linear-gradient(45deg, rgba(54, 165, 121, 0.2), rgba(96, 153, 115, 0.1)), url("https://colorlib.com/etc/cf/ContactFrom_v17/images/bg-01.jpg") center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px; /* Reduced padding */
+}
+
+.info-container div {
+  margin: 18px 0; /* Reduced margin size */
+}
+
+.info-container h3 {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-bottom: 8px; /* Reduced padding */
+}
+
+.info-container p {
+  font-size: 15px; /* Slightly reduced font size */
+  line-height: 1.6;
+  color: var(--white);
+}
+
+.info-container div:first-of-type p {
+  max-width: 240px; /* Slightly reduced width */
+  color: var(--white);
+}
+
+.second-container {
+  padding: 20px; /* Reduced padding */
+}
+
+.second-container h2 {
+  font-size: 28px; /* Slightly reduced font size */
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 8px; /* Reduced margin between form groups */
+}
+
+.form-group input, .form-group textarea {
+  min-height: 50px; /* Reduced input height */
+  border: 2px solid black; /* Black border for input fields */
+  padding: 0 15px; /* Reduced padding */
+  border-radius: 5px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 15px; /* Slightly reduced font size */
+  color: var(--black);
+  text-transform: uppercase;
+  margin-top: -1px;
+}
+
+input {
+  width: 100%;
+  font-size: 14px; /* Slightly reduced font size */
+  margin-top: -2px;
+  color: var(--black);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--gray);
+}
+
+textarea {
+  width: 100%;
+  min-height: 70px; /* Reduced height of textarea */
+  resize: none;
+  padding: 10px 15px; /* Reduced padding */
+  margin-top: -1px;
+}
+
+button {
+  width: 180px; /* Reduced button width */
+  height: 45px; /* Reduced button height */
+  background: #194759;
+  color: var(--white);
+  font-size: 16px; /* Slightly reduced font size */
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 0;
+  position: relative;
+  left: calc(50% - 90px); /* Adjusted the left positioning */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #4F7369;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-form {
+    width: 85vw; /* Slightly reduced width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact-form {
+    flex-direction: column-reverse;
+  }
+
+  .contact-form > * {
+    width: 100%;
+  }
+
+  .first-container {
+    padding: 30px 0; /* Reduced padding */
+  }
+}

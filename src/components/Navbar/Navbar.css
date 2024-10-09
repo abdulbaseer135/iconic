@@ -1,0 +1,178 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: Arial, sans-serif;
+} */
+
+/* Navbar Styles */
+.navbar {
+  background-color: #A7F3E4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: sticky; /* Sticky navbar for better UX */
+  top: 0;
+  z-index: 999;
+}
+
+/* Container to center content */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo image and animation */
+.logo img {
+  height: 50px;
+  animation: slideDown 1s ease-in-out forwards;
+}
+
+/* Logo name */
+.logo-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  animation: fadeInText 1s ease-in-out forwards 0.5s;
+  margin-left: 20px;
+}
+
+/* Navigation items */
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  animation: slideDown 1s ease-in-out 0.3s forwards;
+}
+
+.nav-items li {
+  position: relative;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-items li a:hover {
+  color: #007BFF;
+  transform: translateY(-5px);
+}
+
+/* Underline effect on hover */
+.nav-items li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #007BFF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-items li:hover::after {
+  transform: scaleX(1);
+}
+
+/* Ensure the login button has the desired background color */
+.login-button button {
+  background-color: #194759; /* This color overrides the green */
+  color: white;
+  border: none;
+  padding: 5px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login-button button:hover {
+  background: -webkit-linear-gradient(right, #A7F3E4, #7EBFB3, #4F7369, #194759); /* Gradient background on hover */
+  color: white;
+}
+
+/* Optional: Remove the background-color from .login1 if it conflicts */
+.login1 {
+  background-color: transparent; /* Remove conflicting color */
+}
+
+
+/* Remove the transform effect on hover */
+/* .login-button button:hover {
+  background: -webkit-linear-gradient(right, #A7F3E4, #7EBFB3, #4F7369, #194759);
+  color: white;
+} */
+
+/* .login-button button Link{
+  background: -webkit-linear-gradient(right, #A7F3E4, #7EBFB3, #4F7369, #194759);
+  transform: translateY(-5px);
+  color: white;
+} */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-items li a {
+    font-size: 14px;
+  }
+  
+  .login-button {
+    margin-top: 10px;
+  }
+}
+
+/* Keyframes for smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

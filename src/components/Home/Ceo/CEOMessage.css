@@ -1,0 +1,112 @@
+.ceo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 70vh;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 30px 10% 30px 10%;
+  background-color: #194759;
+  border-radius: 20px;
+  opacity: 0;
+  animation: containerFadeIn 1.5s ease-in-out forwards;
+}
+
+.ceo-message {
+  flex: 1;
+  padding: 20px;
+  background-color: #A7F3E4;
+  border-radius: 10px 0px 20px 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ceo-message:hover {
+  transform: scale(1.05); /* Slightly enlarge the message */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.ceo-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Start hidden */
+  animation: slideInRight 2.5s ease-in-out forwards;
+}
+
+.animated-image {
+  max-width: 80%;
+  max-height: 250px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Initially hidden */
+  animation: slideInRight 1.5s ease-in-out forwards; /* Slide-in from right */
+}
+
+.animated-image:hover {
+  transform: scale(1.1); /* Slightly enlarge the image */
+  filter: brightness(1.1); /* Brighten the image on hover */
+}
+
+.animated-name {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInName 2s ease-in-out forwards 1.5s; /* Animation with delay */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animated-name:hover {
+  transform: scale(1.05); /* Slightly enlarge the name */
+  color: rgba(255, 255, 255, 0.713); /* Change color on hover */
+}
+
+/* Keyframes for animations */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Moves upward */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends at original position */
+  }
+}
+
+@keyframes fadeInName {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Move up slightly */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes containerFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
